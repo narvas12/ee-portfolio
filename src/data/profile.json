@@ -9,7 +9,8 @@
   "email": "ebukaemmanuel71@gmail.com",
   "phone": "+234 8129341700",
   "avatar": "https://res.cloudinary.com/deioo5lrm/image/upload/v1789685624/image_dfhvu5.jpg",
-  "resumeUrl": "/resume.pdf",
+  "logo": "",
+  "resumeUrl": "https://collection.cloudinary.com/deioo5lrm/a7785b5c41fc90aed62d4896a6a5b591",
   "siteUrl": "https://eemmanuel.vercel.app",
   "availability": {
     "open": true,

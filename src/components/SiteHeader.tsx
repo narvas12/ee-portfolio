@@ -1,9 +1,10 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Image from "next/image";
 import { Menu, X } from "lucide-react";
 
-import { activeNavLinks, navigation, profile } from "@/lib/content";
+import { activeNavLinks, logoUrl, navigation, profile } from "@/lib/content";
 
 /**
  * Sticky header. Gains a background once you scroll past the hero, and
@@ -66,9 +67,21 @@ export default function SiteHeader() {
           className="group flex items-center gap-2.5"
           aria-label={`${profile.name}, back to top`}
         >
-          <span className="grid h-9 w-9 place-items-center rounded-lg bg-accent font-mono text-sm font-bold text-accent-ink">
-            {profile.initials}
-          </span>
+          {logoUrl ? (
+            <span className="relative h-9 w-9 shrink-0 overflow-hidden rounded-lg ring-1 ring-line">
+              <Image
+                src={logoUrl}
+                alt=""
+                fill
+                sizes="36px"
+                className="object-cover"
+              />
+            </span>
+          ) : (
+            <span className="grid h-9 w-9 place-items-center rounded-lg bg-accent font-mono text-sm font-bold text-accent-ink">
+              {profile.initials}
+            </span>
+          )}
           <span className="hidden flex-col leading-tight sm:flex">
             <span className="text-sm font-semibold tracking-tight">{profile.name}</span>
             <span className="text-[11px] text-faint">{profile.role}</span>

@@ -48,6 +48,26 @@ export const otherProjects = hasFeatured
   ? projects.items.filter((p) => !p.featured)
   : [];
 
+/**
+ * Square mark for the header and footer.
+ *
+ * `profile.logo` wins if set. Otherwise, when the avatar is hosted on
+ * Cloudinary, this asks Cloudinary to face-crop it, so changing `avatar` also
+ * changes the logo and the two can never drift apart. A non-Cloudinary avatar
+ * returns "" and the components fall back to the initials monogram, because an
+ * uncropped portrait is unreadable at 36px.
+ */
+export const logoUrl: string = (() => {
+  const explicit = profile.logo?.trim();
+  if (explicit) return explicit;
+
+  const avatar = profile.avatar ?? "";
+  if (!avatar.includes("res.cloudinary.com/") || !avatar.includes("/upload/")) return "";
+
+  const [head, tail] = avatar.split("/upload/");
+  return `${head}/upload/c_thumb,g_face,w_160,h_160/${tail}`;
+})();
+
 /** Look up the testimonial a contract engagement points at, if any. */
 export function testimonialFor(id: string | null) {
   if (!id) return null;

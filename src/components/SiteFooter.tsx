@@ -1,7 +1,8 @@
 import { ArrowUp } from "lucide-react";
+import Image from "next/image";
 
 import Icon from "@/components/ui/Icon";
-import { activeNavLinks, profile } from "@/lib/content";
+import { activeNavLinks, logoUrl, profile } from "@/lib/content";
 
 export default function SiteFooter() {
   const year = new Date().getFullYear();
@@ -12,9 +13,21 @@ export default function SiteFooter() {
         <div className="flex flex-col gap-8 sm:flex-row sm:items-start sm:justify-between">
           <div>
             <a href="#top" className="flex items-center gap-2.5">
-              <span className="grid h-9 w-9 place-items-center rounded-lg bg-accent font-mono text-sm font-bold text-accent-ink">
-                {profile.initials}
-              </span>
+              {logoUrl ? (
+                <span className="relative h-9 w-9 shrink-0 overflow-hidden rounded-lg ring-1 ring-line">
+                  <Image
+                    src={logoUrl}
+                    alt=""
+                    fill
+                    sizes="36px"
+                    className="object-cover"
+                  />
+                </span>
+              ) : (
+                <span className="grid h-9 w-9 place-items-center rounded-lg bg-accent font-mono text-sm font-bold text-accent-ink">
+                  {profile.initials}
+                </span>
+              )}
               <span className="flex flex-col leading-tight">
                 <span className="text-sm font-semibold tracking-tight">{profile.name}</span>
                 <span className="text-[11px] text-faint">{profile.role}</span>

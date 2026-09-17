@@ -41,6 +41,9 @@ export interface Profile {
   email: string;
   phone: string;
   avatar: string;
+  /** Square mark for the header and footer. Falls back to `initials`
+   *  when empty. */
+  logo?: string;
   resumeUrl: string;
   siteUrl: string;
   availability: {
