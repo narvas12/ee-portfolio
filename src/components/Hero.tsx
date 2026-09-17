@@ -1,9 +1,10 @@
 import { ArrowDown, ArrowUpRight, Download, MapPin } from "lucide-react";
 
-import Icon from "@/components/ui/Icon";
+import Icon, { WhatsappMark } from "@/components/ui/Icon";
 import Media from "@/components/ui/Media";
 import Reveal from "@/components/ui/Reveal";
-import { profile } from "@/lib/content";
+import { contact, profile } from "@/lib/content";
+import { whatsappUrl } from "@/lib/whatsapp";
 
 export default function Hero() {
   return (
@@ -53,6 +54,17 @@ export default function Hero() {
                     className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
                   />
                 </a>
+                {contact.whatsapp.enabled ? (
+                  <a
+                    href={whatsappUrl(contact.whatsapp.quickReplies[0])}
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    className="inline-flex items-center gap-2.5 rounded-full bg-[#25D366] px-6 py-3.5 text-sm font-semibold text-white shadow-lg shadow-[#25D366]/20 transition-transform hover:scale-[1.03]"
+                  >
+                    <WhatsappMark className="h-[18px] w-[18px]" />
+                    Chat on WhatsApp
+                  </a>
+                ) : null}
                 <a
                   href={profile.resumeUrl}
                   className="inline-flex items-center gap-2 rounded-full border border-line bg-raised/50 px-6 py-3.5 text-sm font-medium text-fg transition-colors hover:border-fg/25"
@@ -71,28 +83,31 @@ export default function Hero() {
             </Reveal>
 
             <Reveal delay={300}>
-              <div className="mt-10 flex flex-wrap items-center gap-x-5 gap-y-3 text-sm text-faint">
-                <span className="inline-flex items-center gap-1.5">
-                  <MapPin size={14} />
-                  {profile.location} · {profile.timezone}
-                </span>
-                <span className="hidden h-3 w-px bg-line sm:block" />
-                <div className="flex items-center gap-1">
-                  {profile.socials.map((social) => (
-                    <a
-                      key={social.label}
-                      href={social.url}
-                      target={social.url.startsWith("http") ? "_blank" : undefined}
-                      rel="noreferrer noopener"
-                      aria-label={`${social.label}: ${social.handle}`}
-                      title={social.handle}
-                      className="grid h-9 w-9 place-items-center rounded-full border border-line text-muted transition-colors hover:border-accent/40 hover:text-accent"
-                    >
-                      <Icon name={social.icon} className="h-4 w-4" />
-                    </a>
-                  ))}
-                </div>
+              <div className="mt-8 flex flex-wrap gap-2">
+                {profile.socials.map((social) => (
+                  <a
+                    key={social.label}
+                    href={social.url}
+                    target={social.url.startsWith("http") ? "_blank" : undefined}
+                    rel="noreferrer noopener"
+                    title={social.handle}
+                    className="group inline-flex items-center gap-2 rounded-full border border-line bg-raised/40 py-2.5 pl-3 pr-4 text-sm text-muted transition-colors hover:border-accent/40 hover:text-accent"
+                  >
+                    <Icon name={social.icon} className="h-4 w-4" />
+                    <span className="font-medium">{social.label}</span>
+                    <span className="hidden text-xs text-faint transition-colors group-hover:text-accent/70 sm:inline">
+                      {social.handle}
+                    </span>
+                  </a>
+                ))}
               </div>
+            </Reveal>
+
+            <Reveal delay={340}>
+              <p className="mt-6 inline-flex items-center gap-1.5 text-sm text-faint">
+                <MapPin size={14} />
+                {profile.location} · {profile.timezone}
+              </p>
             </Reveal>
           </div>
 

@@ -8,6 +8,7 @@ import SiteFooter from "@/components/SiteFooter";
 import SiteHeader from "@/components/SiteHeader";
 import Skills from "@/components/Skills";
 import Testimonials from "@/components/Testimonials";
+import WhatsAppWidget from "@/components/WhatsAppWidget";
 
 export default function Home() {
   return (
@@ -33,6 +34,7 @@ export default function Home() {
       </main>
 
       <SiteFooter />
+      <WhatsAppWidget />
     </>
   );
 }

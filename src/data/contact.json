@@ -15,39 +15,61 @@
   "channels": [
     {
       "label": "Email",
-      "value": "you@example.com",
-      "url": "mailto:you@example.com",
+      "value": "ebukaemmanuel71@gmail.com",
+      "url": "mailto:ebukaemmanuel71@gmail.com",
       "icon": "mail",
       "primary": true
     },
     {
       "label": "Phone",
-      "value": "+234 800 000 0000",
-      "url": "tel:+2348000000000",
+      "value": "+234 8129341700",
+      "url": "tel:+2348129341700",
       "icon": "phone",
       "primary": false
     },
     {
+      "label": "WhatsApp",
+      "value": "+234 812 934 1700",
+      "url": "https://wa.me/2348129341700",
+      "icon": "whatsapp",
+      "primary": false
+    },
+    {
       "label": "LinkedIn",
-      "value": "/in/yourhandle",
-      "url": "https://linkedin.com/in/yourhandle",
+      "value": "/in/ezechukwu-emmanuel",
+      "url": "https://linkedin.com/in/ezechukwu-emmanuel",
       "icon": "linkedin",
       "primary": false
     },
     {
       "label": "GitHub",
-      "value": "@yourhandle",
-      "url": "https://github.com/yourhandle",
+      "value": "@narvas12",
+      "url": "https://github.com/narvas12",
       "icon": "github",
       "primary": false
     },
     {
       "label": "Book a call",
       "value": "30 minutes, any time",
-      "url": "https://cal.com/yourhandle",
+      "url": "https://cal.com/ezechukwu-emmanuel-sg2z8j/30min",
       "icon": "calendar",
       "primary": false
     }
   ],
-  "footerNote": "Based in Lagos, working with teams across Europe and North America."
+  "footerNote": "Based in Lagos, working with teams across Europe and North America.",
+  "whatsapp": {
+    "enabled": true,
+    "number": "2348129341700",
+    "displayName": "Ezechukwu Emmanuel",
+    "role": "Senior Software/Integrations Engineer",
+    "buttonLabel": "Chat",
+    "responseTime": "Typically replies within an hour",
+    "greeting": "Hi there. If you are hiring or scoping a project, WhatsApp is the fastest way to reach me. What can I help with?",
+    "quickReplies": [
+      "I'm hiring for a senior engineering role",
+      "I'd like to discuss a contract project",
+      "Can we book a call this week?"
+    ],
+    "placeholder": "Type your message..."
+  }
 }

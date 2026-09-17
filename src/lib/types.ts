@@ -13,6 +13,7 @@ export type IconName =
   | "mail"
   | "phone"
   | "calendar"
+  | "whatsapp"
   | "dribbble"
   | "globe";
 
@@ -210,6 +211,21 @@ export interface ContactChannel {
   primary: boolean;
 }
 
+export interface WhatsApp {
+  /** Set false to remove the floating widget entirely. */
+  enabled: boolean;
+  /** Full international number, digits only, no + or spaces. */
+  number: string;
+  displayName: string;
+  role: string;
+  buttonLabel: string;
+  responseTime: string;
+  greeting: string;
+  /** One-tap messages. An empty array hides the chips. */
+  quickReplies: string[];
+  placeholder: string;
+}
+
 export interface Contact {
   eyebrow: string;
   heading: string;
@@ -220,6 +236,7 @@ export interface Contact {
   subjects: string[];
   channels: ContactChannel[];
   footerNote: string;
+  whatsapp: WhatsApp;
 }
 
 export interface NavLink {

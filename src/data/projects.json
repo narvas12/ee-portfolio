@@ -78,7 +78,7 @@
       "role": "Backend Developer",
       "context": "Devcenter Innovation",
       "featured": false,
-      "image": "/images/projects/seevees-parser.jpg",
+      "image": "https://res.cloudinary.com/deioo5lrm/image/upload/v1789676435/resume-parser_kkdkel.png",
       "summary": "Reads unstructured résumés into structured applicant records, and drives the pipeline that chases candidates through it.",
       "problem": "Résumés arrive as PDFs in a hundred different layouts, and recruiters were reading every one of them by hand.",
       "approach": "spaCy and PDFMiner extract and classify fields from arbitrary PDF layouts, feeding an applicant pipeline with JWT-authenticated access and automated reminders.",
