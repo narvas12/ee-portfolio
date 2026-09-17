@@ -1,0 +1,126 @@
+{
+  "name": "Ezechukwu Emmanuel",
+  "shortName": "Ezechukwu",
+  "initials": "EE",
+  "role": "Senior Software/Integrations Engineer",
+  "specialty": "E-Invoicing, ERP Integrations, LLM-Powered Backends",
+  "location": "Lagos, Nigeria",
+  "timezone": "WAT (UTC+1)",
+  "email": "ebukaemmanuel71@gmail.com",
+  "phone": "+234 8129341700",
+  "avatar": "https://media.licdn.com/dms/image/v2/D4E03AQHMtCy44kZG5A/profile-displayphoto-scale_400_400/B4EaCcz3rzH4Ag-/0/1789337239705?e=1791417600&v=beta&t=Brm3TLVWHubbEmVbH6BSxSo8Iy-slzmYI-J06lTVrMQ",
+  "resumeUrl": "/resume.pdf",
+  "siteUrl": "https://yourname.dev",
+  "availability": {
+    "open": true,
+    "label": "Open to senior roles",
+    "detail": "Available for full-time and contract work from Nov 2026"
+  },
+  "headline": {
+    "greeting": "Say hi from",
+    "highlight": "Ezechukwu",
+    "trailing": "Senior Software/Integrations Engineer"
+  },
+  "subheadline": "I architect the integrations enterprises run on: e-invoicing compliance, ERP, and the LLM services that make them work without a human in the loop.",
+  "stats": [
+    {
+      "value": "5",
+      "suffix": "+",
+      "label": "Years of experience"
+    },
+    {
+      "value": "10",
+      "suffix": "+",
+      "label": "Systems shipped to production"
+    },
+    {
+      "value": "5",
+      "suffix": "+",
+      "label": "Enterprise clients onboarded"
+    },
+    {
+      "value": "7",
+      "suffix": "",
+      "label": "Engineers led"
+    }
+  ],
+  "about": {
+    "eyebrow": "About me",
+    "heading": "an even",
+    "headingHighlight": "better story",
+    "paragraphs": [
+      "I have spent the last five years on the seams between systems: e-invoicing compliance platforms, ERP tools, and the microservices and message queues that keep them in agreement. Most of my work is backend and integration engineering: REST APIs, event-driven pipelines, and the unglamorous infrastructure that decides whether a product feels fast or feels broken.",
+      "Lately that has meant putting large language models somewhere they have to be reliable. I have built RAG services that pull invoices out of Sage and QuickBooks, map them to compliance schemas, and catch the anomalies before a tax authority does, and multi-LLM orchestration that has to reach a consensus before it moves anyone's money.",
+      "A lot of the rest is legacy modernisation: taking something business-critical nobody wants to touch, carving it into services with clear boundaries, and migrating the data without losing a transaction. Outside of shipping, I mentor engineers and have led a 7-person team."
+    ]
+  },
+  "socials": [
+    {
+      "label": "GitHub",
+      "icon": "github",
+      "url": "https://github.com/narvas12",
+      "handle": "@narvas12"
+    },
+    {
+      "label": "LinkedIn",
+      "icon": "linkedin",
+      "url": "https://linkedin.com/in/ezechukwu-emmanuel",
+      "handle": "/in/ezechukwu-emmanuel"
+    },
+    {
+      "label": "X",
+      "icon": "x",
+      "url": "https://x.com/Dev_Caliban",
+      "handle": "@Dev_Caliban"
+    },
+    {
+      "label": "Email",
+      "icon": "mail",
+      "url": "mailto:ebukaemmanuel71@gmail.com",
+      "handle": "ebukaemmanuel71@gmail.com"
+    }
+  ],
+  "seo": {
+    "title": "Ezechukwu Emmanuel | Senior Software/Integrations Engineer",
+    "description": "Senior Software/Integrations Engineer with 5+ years building e-invoicing compliance platforms, ERP integrations, and LLM-powered backends in Python, FastAPI and C#. Available for senior engineering roles and contract work.",
+    "keywords": [
+      "Senior Software Engineer",
+      "Integrations Engineer",
+      "Solutions Architect",
+      "Backend Engineer",
+      "Platform Engineering",
+      "E-Invoicing",
+      "Enterprise Resource Planning (ERP)",
+      "Legacy System Modernization",
+      "Microservices",
+      "Distributed Systems",
+      "Apache Kafka",
+      "Message Queues",
+      "Redis",
+      "PostgreSQL",
+      "Database Design",
+      "Data Migration",
+      "Transaction Management",
+      "Authentication and Authorization",
+      "Role-Based Access Control (RBAC)",
+      "C#",
+      "Kotlin",
+      "Kotlin Coroutines",
+      "Node.js",
+      "TypeScript",
+      "Python",
+      "FastAPI",
+      "Django REST Framework",
+      "LangChain",
+      "AWS Cloud Infrastructure",
+      "Amazon S3",
+      "Amazon ECS",
+      "Cloud Services",
+      "Docker",
+      "Kubernetes",
+      "CI/CD",
+      "Git"
+    ],
+    "ogImage": "/images/og.png"
+  }
+}

@@ -1,0 +1,172 @@
+{
+  "eyebrow": "Career",
+  "heading": "Professional",
+  "headingHighlight": "Experience",
+  "educationHeading": "Certifications",
+  "items": [
+    {
+      "id": "heirs-2025",
+      "company": "Heirs Technologies",
+      "companyUrl": null,
+      "role": "Lead Backend Engineer / System Architect",
+      "type": "Full-time",
+      "location": "Remote",
+      "start": "Aug 2025",
+      "end": "Present",
+      "current": true,
+      "summary": "Own the architecture and delivery of an enterprise e-invoicing compliance platform and core ERP modules, from requirements through production onboarding.",
+      "highlights": [
+        "Planned, architected and built an enterprise e-invoicing compliance platform that keeps businesses aligned with NRS/FIRS requirements with minimal manual intervention, onboarding 5+ enterprise clients and integrating each one's ERP regardless of the underlying system.",
+        "Built a RAG-powered invoice transformation service that pulls invoices from Sage and QuickBooks, converts them to FIRS-compliant schemas, validates payloads, and maps FIRS responses back to ERP formats using LLM-based field mapping and anomaly detection.",
+        "Integrated legacy Sage X3 through a self-hosted Activepieces automation layer, connecting on-premise infrastructure to the cloud platform without major changes to the legacy system.",
+        "Developed microservices integrating directly with FIRS/NRS endpoints for taxpayer authentication, validation, signing, confirmation, download, update, exchange and reporting, designed around asynchronous event-driven messaging to scale across high invoice volumes.",
+        "On Converge 2.0 ERP, re-engineered platform-wide RBAC from an XLS-driven process populated via Kafka into a code-owned, manifest-driven permission system that auto-registers permissions for new modules.",
+        "Built the Leave Management and Expense Management backends end to end: request APIs, leave types, balances, approvals, cash advances, cash retirement and workflow validation.",
+        "Engineered an LLM-powered assessment generator producing multiple-choice, true/false and scenario-based questions as standardised JSON for i-Academy, with scoring logic, difficulty ranking and version-controlled prompt templates.",
+        "Served as primary technical point of contact through client demos and post-onboarding support, closing 5+ enterprise accounts."
+      ],
+      "tech": [
+        "Python",
+        "FastAPI",
+        "C# / ASP.NET",
+        "Next.js",
+        "Microservices",
+        "RAG / LLMs",
+        "Celery",
+        "Redis",
+        "Kafka",
+        "PostgreSQL",
+        "SQL Server",
+        "Azure",
+        "Sage X3"
+      ]
+    },
+    {
+      "id": "devcenter-2023",
+      "company": "Devcenter Innovation",
+      "companyUrl": null,
+      "role": "Backend Developer",
+      "type": "Full-time",
+      "location": "Remote",
+      "start": "Jan 2023",
+      "end": "May 2025",
+      "current": false,
+      "summary": "Backend engineer across four client products spanning payments, HR-tech, hospitality and e-commerce.",
+      "highlights": [
+        "WallX Paycode (Jan–May 2025): developed secure payment APIs and integrated finance gateways, improved database performance, and implemented PCI-aligned security practices.",
+        "SEEVEES_ai (Aug 2024–Jan 2025): built an NLP résumé parser with spaCy and PDFMiner, plus JWT authentication, automated reminders and applicant pipelines.",
+        "Ruumready Hotel Management (May–Aug 2024): built room management, wallet and booking APIs, with Celery and Redis handling asynchronous notifications and background jobs.",
+        "AMARAE e-commerce (Jan–Aug 2023): developed high-performance APIs for products, payments and order processing."
+      ],
+      "tech": [
+        "Python",
+        "Django REST Framework",
+        "Celery",
+        "Redis",
+        "PostgreSQL",
+        "spaCy",
+        "PDFMiner",
+        "JWT Auth"
+      ]
+    },
+    {
+      "id": "nuel-green-2022",
+      "company": "Nuel-Green ICT",
+      "companyUrl": null,
+      "role": "Full-Stack Developer",
+      "type": "Full-time",
+      "location": "Remote",
+      "start": "Jan 2022",
+      "end": "Nov 2022",
+      "current": false,
+      "summary": "Backend lead on an ed-tech platform, running a 7-person development team.",
+      "highlights": [
+        "Led backend engineering for an ed-tech platform serving students and instructors.",
+        "Managed a 7-person development team, coordinating delivery across backend and frontend."
+      ],
+      "tech": [
+        "Python",
+        "PostgreSQL",
+        "JavaScript"
+      ]
+    },
+    {
+      "id": "olif-2021",
+      "company": "Olif Professional Services LTD",
+      "companyUrl": null,
+      "role": "Full-Stack Developer",
+      "type": "Full-time",
+      "location": "Remote",
+      "start": "Jan 2021",
+      "end": "May 2021",
+      "current": false,
+      "summary": "Backend work on internal business automation for a professional services firm.",
+      "highlights": [
+        "Built business automation APIs replacing manual internal processes.",
+        "Optimised PostgreSQL query performance across the reporting workload."
+      ],
+      "tech": [
+        "Python",
+        "PostgreSQL"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "id": "fcc-js-dsa",
+      "school": "freeCodeCamp",
+      "credential": "JavaScript Algorithms & Data Structures",
+      "detail": "",
+      "start": "",
+      "end": ""
+    },
+    {
+      "id": "google-python-crash",
+      "school": "Google",
+      "credential": "Crash Course on Python",
+      "detail": "",
+      "start": "",
+      "end": ""
+    },
+    {
+      "id": "google-python-os",
+      "school": "Google",
+      "credential": "Using Python to Interact with the Operating System",
+      "detail": "",
+      "start": "",
+      "end": ""
+    },
+    {
+      "id": "google-troubleshooting",
+      "school": "Google",
+      "credential": "Troubleshooting & Debugging Techniques",
+      "detail": "",
+      "start": "",
+      "end": ""
+    },
+    {
+      "id": "google-git-github",
+      "school": "Google",
+      "credential": "Git & GitHub",
+      "detail": "",
+      "start": "",
+      "end": ""
+    },
+    {
+      "id": "google-config-cloud",
+      "school": "Google",
+      "credential": "Configuration Management & the Cloud",
+      "detail": "",
+      "start": "",
+      "end": ""
+    },
+    {
+      "id": "google-automating-tasks",
+      "school": "Google",
+      "credential": "Automating Real-World Tasks with Python",
+      "detail": "",
+      "start": "",
+      "end": ""
+    }
+  ]
+}

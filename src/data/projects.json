@@ -1,0 +1,90 @@
+{
+  "eyebrow": "Selected work",
+  "heading": "Featured",
+  "headingHighlight": "Projects",
+  "intro": "Systems I owned end to end, from architecture through production onboarding. Most are proprietary, so I am happy to walk through the design on a call.",
+  "items": [
+    {
+      "id": "einvoicing-platform",
+      "title": "E-Invoicing Compliance Platform",
+      "subtitle": "Enterprise NRS/FIRS compliance, from ERP to tax authority",
+      "year": "2025–2026",
+      "role": "Architect & Lead Backend Engineer",
+      "context": "Heirs Technologies",
+      "featured": true,
+      "image": "/images/projects/einvoicing-platform.jpg",
+      "summary": "A platform that keeps businesses continuously compliant with Nigerian e-invoicing regulation, pulling invoices straight out of whatever ERP a client already runs and putting them in front of the tax authority in the shape it demands.",
+      "problem": "Compliance meant re-keying invoices by hand into a government schema, per invoice, per business, and every client ran a different ERP, several of them on-premise and untouchable.",
+      "approach": "A RAG-powered transformation service maps invoices from Sage and QuickBooks into FIRS-compliant schemas using LLM-based field mapping and anomaly detection, behind asynchronous event-driven microservices that talk to FIRS/NRS for authentication, validation, signing, confirmation, download, update, exchange and reporting. Legacy Sage X3 connects through a self-hosted Activepieces layer, so nothing on-premise had to change.",
+      "metrics": [
+        { "value": "5+", "label": "Enterprise clients onboarded" },
+        { "value": "8", "label": "FIRS/NRS integrations built" },
+        { "value": "0", "label": "Legacy rewrites required" }
+      ],
+      "tech": [
+        "Python",
+        "FastAPI",
+        "Next.js",
+        "RAG / LLMs",
+        "Celery",
+        "Redis",
+        "PostgreSQL",
+        "Sage X3",
+        "Activepieces"
+      ],
+      "links": [{ "label": "Request a walkthrough", "url": "#contact", "type": "case" }]
+    },
+    {
+      "id": "converge-erp",
+      "title": "Converge 2.0 ERP",
+      "subtitle": "Platform-wide permissions, leave and expense management",
+      "year": "2026",
+      "role": "Lead Backend Engineer",
+      "context": "Heirs Technologies",
+      "featured": true,
+      "image": "/images/projects/converge-erp.jpg",
+      "summary": "The access-control backbone for a multi-module ERP, plus the two workflow modules that most of the company touches every month.",
+      "problem": "Permissions were defined in a spreadsheet, pushed through Kafka into the platform. Nobody could review a permission change in a pull request, and every new module meant another XLS round-trip.",
+      "approach": "Moved the source of truth into code: a manifest-driven permission generation system that auto-registers permissions when a new module ships, replacing the XLS-and-Kafka pipeline entirely. Then built Leave Management and Expense Management on top of it: request APIs, leave types, balances, approvals, cash advances, retirement and workflow validation.",
+      "metrics": [
+        { "value": "XLS → code", "label": "Permission source of truth" },
+        { "value": "Auto", "label": "Registration for new modules" },
+        { "value": "3", "label": "Core modules delivered" }
+      ],
+      "tech": ["C# / ASP.NET", "Python", "Kafka", "SQL Server", "PostgreSQL", "RBAC"],
+      "links": [{ "label": "Request a walkthrough", "url": "#contact", "type": "case" }]
+    },
+    {
+      "id": "assessment-engine",
+      "title": "Assessment Generator & Scoring Engine",
+      "subtitle": "LLM-generated assessments with version-controlled prompts",
+      "year": "2025",
+      "role": "Backend Engineer",
+      "context": "Heirs Technologies · i-Academy",
+      "featured": false,
+      "image": "/images/projects/assessment-engine.jpg",
+      "summary": "Generates multiple-choice, true/false and scenario-based questions as standardised JSON, then scores and ranks them by difficulty.",
+      "problem": "Writing and calibrating assessment content by hand did not scale with the course catalogue.",
+      "approach": "Version-controlled prompt templates producing a stable JSON contract, with scoring logic and difficulty ranking layered on top so output stays comparable as prompts evolve.",
+      "metrics": [{ "value": "3", "label": "Question formats generated" }],
+      "tech": ["Python", "FastAPI", "LLMs", "Prompt Engineering"],
+      "links": []
+    },
+    {
+      "id": "seevees-parser",
+      "title": "SEEVEES_ai Résumé Parser",
+      "subtitle": "NLP pipeline for applicant screening",
+      "year": "2024–2025",
+      "role": "Backend Developer",
+      "context": "Devcenter Innovation",
+      "featured": false,
+      "image": "/images/projects/seevees-parser.jpg",
+      "summary": "Reads unstructured résumés into structured applicant records, and drives the pipeline that chases candidates through it.",
+      "problem": "Résumés arrive as PDFs in a hundred different layouts, and recruiters were reading every one of them by hand.",
+      "approach": "spaCy and PDFMiner extract and classify fields from arbitrary PDF layouts, feeding an applicant pipeline with JWT-authenticated access and automated reminders.",
+      "metrics": [],
+      "tech": ["Python", "spaCy", "PDFMiner", "Django REST Framework", "JWT Auth"],
+      "links": []
+    }
+  ]
+}

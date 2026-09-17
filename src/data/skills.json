@@ -1,0 +1,80 @@
+{
+  "eyebrow": "Toolkit",
+  "heading": "Technical",
+  "headingHighlight": "Depth",
+  "intro": "Where I am genuinely strong, and where I am dangerous enough to be useful.",
+  "categories": [
+    {
+      "name": "Languages & Frameworks",
+      "items": [
+        { "name": "Python", "level": 95 },
+        { "name": "FastAPI", "level": 93 },
+        { "name": "Django REST Framework", "level": 90 },
+        { "name": "C# / ASP.NET", "level": 85 },
+        { "name": "TypeScript / JavaScript", "level": 87 },
+        { "name": "React & Next.js", "level": 85 },
+        { "name": "Kotlin", "level": 70 }
+      ]
+    },
+    {
+      "name": "LLM & AI Integration",
+      "items": [
+        { "name": "RAG pipelines", "level": 92 },
+        { "name": "Multi-LLM orchestration", "level": 90 },
+        { "name": "LangChain & LangGraph", "level": 88 },
+        { "name": "Prompt engineering", "level": 88 },
+        { "name": "GPT-4o & model integration", "level": 90 }
+      ]
+    },
+    {
+      "name": "Machine Learning & Data",
+      "items": [
+        { "name": "Scikit-learn", "level": 80 },
+        { "name": "NumPy & Pandas", "level": 85 },
+        { "name": "spaCy & PDFMiner (NLP)", "level": 82 },
+        { "name": "Clustering & fuzzy matching", "level": 80 }
+      ]
+    },
+    {
+      "name": "Architecture & System Design",
+      "items": [
+        { "name": "Microservices", "level": 92 },
+        { "name": "Event-driven systems", "level": 90 },
+        { "name": "REST API design & OpenAPI", "level": 93 },
+        { "name": "JWT auth & RBAC", "level": 92 },
+        { "name": "Queue-based processing", "level": 88 },
+        { "name": "Legacy system modernisation", "level": 88 }
+      ]
+    },
+    {
+      "name": "Databases, Messaging & Scheduling",
+      "items": [
+        { "name": "PostgreSQL", "level": 92 },
+        { "name": "SQL Server", "level": 82 },
+        { "name": "MySQL & MongoDB", "level": 80 },
+        { "name": "Redis", "level": 88 },
+        { "name": "Celery & APScheduler", "level": 88 },
+        { "name": "Apache Kafka", "level": 84 }
+      ]
+    },
+    {
+      "name": "DevOps & Cloud",
+      "items": [
+        { "name": "Docker", "level": 90 },
+        { "name": "AWS ECS (Fargate)", "level": 86 },
+        { "name": "Azure App Services", "level": 82 },
+        { "name": "GitHub Actions (CI/CD)", "level": 87 },
+        { "name": "NGINX", "level": 83 },
+        { "name": "Git", "level": 93 }
+      ]
+    }
+  ],
+  "practices": [
+    "System design & integration architecture",
+    "Legacy system modernisation",
+    "Event-driven, fault-tolerant architectures",
+    "Authentication & access control design",
+    "Full product ownership, requirements to onboarding",
+    "Technical mentorship & team leadership"
+  ]
+}

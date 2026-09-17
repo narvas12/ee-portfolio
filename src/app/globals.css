@@ -1,26 +1,189 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* --------------------------------------------------------------------------
+   Design tokens
+   Change these and the whole site follows. Nothing below hard-codes a colour.
+   -------------------------------------------------------------------------- */
+@theme {
+  --color-ink: #06070a;
+  --color-surface: #0b0d11;
+  --color-raised: #11141a;
+  --color-line: #1c2027;
+  --color-line-soft: #14171d;
+
+  --color-fg: #eef1f4;
+  --color-muted: #99a1ab;
+  --color-faint: #636b76;
+
+  --color-accent: #2fe08a;
+  --color-accent-dim: #1fae6b;
+  --color-accent-ink: #04140c;
+
+  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
+
+  --radius-card: 1.25rem;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* --------------------------------------------------------------------------
+   Base
+   -------------------------------------------------------------------------- */
+html {
+  scroll-behavior: smooth;
+  /* Offset anchor jumps so the sticky header never covers a heading. */
+  scroll-padding-top: 6rem;
+  background-color: var(--color-ink);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-ink);
+  color: var(--color-fg);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background-color: var(--color-accent);
+  color: var(--color-accent-ink);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* Thin, unobtrusive scrollbar that matches the surface. */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-line) transparent;
+}
+
+/* --------------------------------------------------------------------------
+   Reveal-on-scroll
+   `Reveal` adds `data-visible` once the element enters the viewport.
+   -------------------------------------------------------------------------- */
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(18px);
+  transition:
+    opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+  transition-delay: var(--reveal-delay, 0ms);
+}
+
+[data-reveal][data-visible="true"] {
+  opacity: 1;
+  transform: none;
+}
+
+/* Never hide content from a visitor whose browser is not running the script.
+   A blank portfolio is worse than an unanimated one. */
+@media (scripting: none) {
+  [data-reveal] {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  [data-reveal] {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Reusable pieces
+   -------------------------------------------------------------------------- */
+@utility container-page {
+  width: 100%;
+  max-width: 76rem;
+  margin-inline: auto;
+  padding-inline: 1rem;
+
+  @media (width >= 40rem) {
+    padding-inline: 2rem;
+  }
+
+  @media (width >= 64rem) {
+    padding-inline: 3rem;
+  }
+}
+
+/* Faint grid that gives the dark background some depth. */
+.backdrop-grid {
+  background-image:
+    linear-gradient(to right, color-mix(in oklab, var(--color-line) 55%, transparent) 1px, transparent 1px),
+    linear-gradient(to bottom, color-mix(in oklab, var(--color-line) 55%, transparent) 1px, transparent 1px);
+  background-size: 64px 64px;
+  mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, #000 20%, transparent 75%);
+}
+
+.accent-glow {
+  background: radial-gradient(
+    circle at center,
+    color-mix(in oklab, var(--color-accent) 22%, transparent) 0%,
+    transparent 68%
+  );
+}
+
+/* Animated conic border used on the primary CTA and featured cards. */
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 38s linear infinite;
+}
+
+@keyframes pulse-ring {
+  0% {
+    box-shadow: 0 0 0 0 color-mix(in oklab, var(--color-accent) 60%, transparent);
+  }
+  70% {
+    box-shadow: 0 0 0 7px transparent;
+  }
+  100% {
+    box-shadow: 0 0 0 0 transparent;
+  }
+}
+
+.animate-pulse-ring {
+  animation: pulse-ring 2.4s cubic-bezier(0.66, 0, 0, 1) infinite;
+}
+
+/* Print: give recruiters a clean PDF if they hit Cmd+P. */
+@media print {
+  body {
+    background: #fff;
+    color: #000;
+  }
+
+  [data-reveal] {
+    opacity: 1;
+    transform: none;
+  }
+
+  .no-print {
+    display: none !important;
+  }
 }

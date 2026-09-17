@@ -1,0 +1,103 @@
+{
+  "eyebrow": "Independent work",
+  "heading": "Contract",
+  "headingHighlight": "Engagements",
+  "intro": "Selected contract and independent work delivered alongside full-time roles.",
+  "items": [
+    {
+      "id": "africave-crypto",
+      "client": "Africave Technologies",
+      "clientUrl": null,
+      "project": "Automated Crypto Analysis & Trading Engine",
+      "role": "Backend Engineer",
+      "engagement": "Contract",
+      "start": "Sep 2025",
+      "end": "Mar 2026",
+      "duration": "7 months",
+      "status": "Completed",
+      "summary": "A multi-LLM engine that reads market data, reaches a consensus view, and trades on it, built to give traders an instant, defensible read instead of a dashboard to interpret.",
+      "outcomes": [
+        "Designed a multi-LLM orchestration engine that analyses OHLCV market data and produces consensus-based market insights.",
+        "Built a real-time automated trading system executing trades on Binance and Bybit from combined LLM and ML signals.",
+        "Implemented rate-limited asset analysis APIs (2 tokens per 4 hours) to keep inference cost and usage under control.",
+        "Delivered a fully dockerized, fault-tolerant trading and analytics pipeline."
+      ],
+      "tech": [
+        "Python",
+        "FastAPI",
+        "LangChain",
+        "LLMs",
+        "Binance API",
+        "Bybit API",
+        "Redis",
+        "PostgreSQL",
+        "Docker"
+      ],
+      "testimonialId": null
+    },
+    {
+      "id": "independent-recruitment",
+      "client": "Independent",
+      "clientUrl": null,
+      "project": "AI-Powered Recruitment Automation System",
+      "role": "Full-Stack Developer",
+      "engagement": "Independent",
+      "start": "Mar 2025",
+      "end": "Present",
+      "duration": "Ongoing",
+      "status": "Ongoing",
+      "summary": "An end-to-end hiring pipeline that sources candidates, reads their résumés, screens them, and books the interview, without a recruiter touching a spreadsheet.",
+      "outcomes": [
+        "Automated candidate sourcing, résumé analysis, screening and interview scheduling.",
+        "Implemented GDPR-compliant data flow and Google Calendar integration."
+      ],
+      "tech": ["Python", "FastAPI", "LLMs", "Google Calendar API", "PostgreSQL"],
+      "testimonialId": null
+    },
+    {
+      "id": "klant-sartorial",
+      "client": "Klant Solutions",
+      "clientUrl": null,
+      "project": "Sartorial ERP",
+      "role": "Full-Stack Developer",
+      "engagement": "Contract",
+      "start": "Oct 2024",
+      "end": "Apr 2025",
+      "duration": "7 months",
+      "status": "Completed",
+      "summary": "ERP for a bespoke tailoring business: inventory, customer measurements and payments in one system, with access control tight enough for multi-branch use.",
+      "outcomes": [
+        "Built ERP modules for inventory, customer measurements and payments.",
+        "Implemented RBAC, secure API authentication and background task processing."
+      ],
+      "tech": ["Python", "Django REST Framework", "PostgreSQL", "Celery", "Redis"],
+      "testimonialId": null
+    },
+    {
+      "id": "pioneer-recurscan",
+      "client": "Pioneer AI",
+      "clientUrl": null,
+      "project": "Recur Scan AI Model",
+      "role": "ML Engineer",
+      "engagement": "Contract",
+      "start": "Jan 2025",
+      "end": "Mar 2025",
+      "duration": "3 months",
+      "status": "Completed",
+      "summary": "Detecting recurring transactions in messy financial data, where the same merchant never spells its name the same way twice.",
+      "outcomes": [
+        "Developed clustering and fuzzy-matching pipelines for recurring transaction detection.",
+        "Deployed containerised ML services on AWS ECS (Fargate)."
+      ],
+      "tech": [
+        "Python",
+        "Scikit-learn",
+        "NumPy",
+        "Pandas",
+        "Docker",
+        "AWS ECS (Fargate)"
+      ],
+      "testimonialId": "dallan-quass"
+    }
+  ]
+}

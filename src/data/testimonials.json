@@ -1,0 +1,39 @@
+{
+  "eyebrow": "References",
+  "heading": "What people",
+  "headingHighlight": "say",
+  "items": [
+    {
+      "id": "victor-ndulue",
+      "quote": "I've had the pleasure of working with Emmanuel, and I've always been impressed by his ability to get things done. He's particularly strong at integrating AI into software solutions, backed by solid research skills and a practical approach to problem-solving. He's reliable, curious, and delivers quality work even within tight timelines. I'd happily recommend him to any team looking for a skilled and adaptable Software Engineer.",
+      "name": "Victor Ndulue",
+      "role": "Backend Software Engineer (.NET)",
+      "company": "worked on the same team",
+      "avatar": "/images/testimonials/victor-ndulue.jpg"
+    },
+    {
+      "id": "sember-adekaa",
+      "quote": "I had the privilege of having Emanuel work under my leadership on several projects, and I can confidently say he is a developer with exceptional character and strong work ethics (traits that are often rare in software developers). Emanuel consistently demonstrated outstanding technical skills and a remarkable ability to meet deadlines without compromising quality. His professionalism, reliability, and proactive approach made him a valuable asset to every project he contributed to. I highly recommend Emanuel to anyone in need of a dedicated Software Engineer. He will in no doubt exceed expectations.",
+      "name": "Sember Adekaa",
+      "role": "Tech Talent & Growth Leader",
+      "company": "managed Ezechukwu directly",
+      "avatar": "/images/testimonials/sember-adekaa.jpg"
+    },
+    {
+      "id": "dallan-quass",
+      "quote": "Emmanuel has been a student at Pioneer AI Academy since January 2025, where he has been studying python development, software engineering principles, machine learning, and artificial intelligence. I have found him to be very good to work with: he is a good communicator, he helps others, he works hard, and he is able to keep up with a heavy course load. He has a promising career ahead!",
+      "name": "Dallan Quass",
+      "role": "Instructor",
+      "company": "Pioneer AI Academy",
+      "avatar": "/images/testimonials/dallan-quass.jpg"
+    },
+    {
+      "id": "chibuzo-michael",
+      "quote": "He is very trustworthy and would execute as at when due. Tried him and I will highly recommend.",
+      "name": "Chibuzo Michael",
+      "role": "Sales Manager, Ideal Roofing System",
+      "company": "studied together",
+      "avatar": "/images/testimonials/chibuzo-michael.jpg"
+    }
+  ]
+}

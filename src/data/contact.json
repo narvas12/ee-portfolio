@@ -1,0 +1,53 @@
+{
+  "eyebrow": "Get in touch",
+  "heading": "Let us work",
+  "headingHighlight": "together",
+  "intro": "I reply to every message within one business day. If you are hiring, tell me about the team and the problem. That tells me more than a job description does.",
+  "formEndpoint": "",
+  "formNote": "Add a Formspree or Getform endpoint to contact.json to receive submissions directly. Until then, the form opens your email client with the message pre-filled.",
+  "subjects": [
+    "Full-time senior role",
+    "Contract engagement",
+    "Technical consulting",
+    "Speaking or mentorship",
+    "Something else"
+  ],
+  "channels": [
+    {
+      "label": "Email",
+      "value": "you@example.com",
+      "url": "mailto:you@example.com",
+      "icon": "mail",
+      "primary": true
+    },
+    {
+      "label": "Phone",
+      "value": "+234 800 000 0000",
+      "url": "tel:+2348000000000",
+      "icon": "phone",
+      "primary": false
+    },
+    {
+      "label": "LinkedIn",
+      "value": "/in/yourhandle",
+      "url": "https://linkedin.com/in/yourhandle",
+      "icon": "linkedin",
+      "primary": false
+    },
+    {
+      "label": "GitHub",
+      "value": "@yourhandle",
+      "url": "https://github.com/yourhandle",
+      "icon": "github",
+      "primary": false
+    },
+    {
+      "label": "Book a call",
+      "value": "30 minutes, any time",
+      "url": "https://cal.com/yourhandle",
+      "icon": "calendar",
+      "primary": false
+    }
+  ],
+  "footerNote": "Based in Lagos, working with teams across Europe and North America."
+}
