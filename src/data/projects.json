@@ -17,9 +17,18 @@
       "problem": "Compliance meant re-keying invoices by hand into a government schema, per invoice, per business, and every client ran a different ERP, several of them on-premise and untouchable.",
       "approach": "A RAG-powered transformation service maps invoices from Sage and QuickBooks into FIRS-compliant schemas using LLM-based field mapping and anomaly detection, behind asynchronous event-driven microservices that talk to FIRS/NRS for authentication, validation, signing, confirmation, download, update, exchange and reporting. Legacy Sage X3 connects through a self-hosted Activepieces layer, so nothing on-premise had to change.",
       "metrics": [
-        { "value": "5+", "label": "Enterprise clients onboarded" },
-        { "value": "8", "label": "FIRS/NRS integrations built" },
-        { "value": "0", "label": "Legacy rewrites required" }
+        {
+          "value": "5+",
+          "label": "Enterprise clients onboarded"
+        },
+        {
+          "value": "8",
+          "label": "FIRS/NRS integrations built"
+        },
+        {
+          "value": "0",
+          "label": "Legacy rewrites required"
+        }
       ],
       "tech": [
         "Python",
@@ -32,7 +41,61 @@
         "Sage X3",
         "Activepieces"
       ],
-      "links": [{ "label": "Request a walkthrough", "url": "#contact", "type": "case" }]
+      "links": [
+        {
+          "label": "Request a walkthrough",
+          "url": "#contact",
+          "type": "case"
+        }
+      ]
+    },
+    {
+      "id": "cixtech-custody-engine",
+      "title": "Multi-Tenant Crypto Custody Engine",
+      "subtitle": "Stablecoin custody rented through one API, so a fintech never becomes a custodian",
+      "year": "2026 to Present",
+      "role": "Sole Engineer & Architect",
+      "context": "cixtech · Pre-production",
+      "featured": true,
+      "image": "/images/projects/cixtech-custody-engine.jpg",
+      "summary": "Cross-border settlement in minutes instead of days, without the fintech on top having to become a custodian. cixtech holds the keys, tracks whose money is whose and proves it is all still there, rented through one API. First tenant is a Nigerian payment gateway, and the design is deliberately jurisdiction-pluggable. I built the custody engine, not the payment product above it: ADR 0017 removed checkout, FX and fiat off-ramp from scope on purpose. Testnet only; mainnet is gated on a DASP licence and an external cryptographic audit, both documented as unmet.",
+      "problem": "Sending money across a border still moves through correspondent banking: days to settle, fees stacked at every hop, and for much of Africa, LATAM and South East Asia, routes that simply do not exist. Stablecoins fix the rail but move the problem rather than removing it. A business that wants to accept them has to become a custodian overnight: hold private keys for other people's money, know exactly whose money is whose, prove it is all still there, and satisfy a regulator. That is a licence, a security function and a double-entry accounting system, not a payments integration.",
+      "approach": "Three failure modes drove the design. First, small remittances are eaten by network fees: the obvious build gives each payment a fresh address and sweeps it to treasury, paying gas twice, often more than a $20 transfer is worth. Instead funds stay where they land in bounded per-merchant address pools and the merchant's payout is the sweep, so there is one on-chain movement per payment and fragmentation is capped by pool size rather than growing with every deposit. Second, merchants cannot tell whose money arrived, the most-cited operational complaint about crypto gateways, so attribution is structural: each invoice holds exclusive use of an address for its payment window, with a cool-off so a late payment is never credited to the next customer. No amount-matching, no guesswork. Third, custodians lose track of money, so the ledger proves that assets never fall below liabilities across every generated history including reorgs, replays and concurrent writes, reconciles continuously against on-chain state, and freezes withdrawals on drift rather than absorbing it quietly; client-asset segregation is demonstrable from the ledger, which is a licence condition, not a nicety. Underneath all three, tenant isolation is enforced by Postgres row-level security with a dedicated non-bypass role and insert-only grants on the ledger and audit tables, and every withdrawal clears limits, destination allow-listing with a cool-down, velocity caps, dual approval, a time-lock and a kill switch before anything is signed.",
+      "metrics": [
+        {
+          "value": "1",
+          "label": "On-chain movement per payment, not two"
+        },
+        {
+          "value": "Proven",
+          "label": "Assets never fall below liabilities, across generated histories"
+        },
+        {
+          "value": "29",
+          "label": "Security findings self-audited and closed"
+        }
+      ],
+      "tech": [
+        "TypeScript (strict)",
+        "Node 20",
+        "Fastify 5",
+        "PostgreSQL 17",
+        "Kysely",
+        "BullMQ / Redis",
+        "Zod",
+        "Vitest",
+        "fast-check",
+        "secp256k1 / BIP32",
+        "Prometheus",
+        "Docker"
+      ],
+      "links": [
+        {
+          "label": "Request a walkthrough",
+          "url": "#contact",
+          "type": "case"
+        }
+      ]
     },
     {
       "id": "converge-erp",
@@ -47,12 +110,34 @@
       "problem": "Permissions were defined in a spreadsheet, pushed through Kafka into the platform. Nobody could review a permission change in a pull request, and every new module meant another XLS round-trip.",
       "approach": "Moved the source of truth into code: a manifest-driven permission generation system that auto-registers permissions when a new module ships, replacing the XLS-and-Kafka pipeline entirely. Then built Leave Management and Expense Management on top of it: request APIs, leave types, balances, approvals, cash advances, retirement and workflow validation.",
       "metrics": [
-        { "value": "XLS → code", "label": "Permission source of truth" },
-        { "value": "Auto", "label": "Registration for new modules" },
-        { "value": "3", "label": "Core modules delivered" }
+        {
+          "value": "XLS → code",
+          "label": "Permission source of truth"
+        },
+        {
+          "value": "Auto",
+          "label": "Registration for new modules"
+        },
+        {
+          "value": "3",
+          "label": "Core modules delivered"
+        }
       ],
-      "tech": ["C# / ASP.NET", "Python", "Kafka", "SQL Server", "PostgreSQL", "RBAC"],
-      "links": [{ "label": "Request a walkthrough", "url": "#contact", "type": "case" }]
+      "tech": [
+        "C# / ASP.NET",
+        "Python",
+        "Kafka",
+        "SQL Server",
+        "PostgreSQL",
+        "RBAC"
+      ],
+      "links": [
+        {
+          "label": "Request a walkthrough",
+          "url": "#contact",
+          "type": "case"
+        }
+      ]
     },
     {
       "id": "assessment-engine",
@@ -66,8 +151,18 @@
       "summary": "Generates multiple-choice, true/false and scenario-based questions as standardised JSON, then scores and ranks them by difficulty.",
       "problem": "Writing and calibrating assessment content by hand did not scale with the course catalogue.",
       "approach": "Version-controlled prompt templates producing a stable JSON contract, with scoring logic and difficulty ranking layered on top so output stays comparable as prompts evolve.",
-      "metrics": [{ "value": "3", "label": "Question formats generated" }],
-      "tech": ["Python", "FastAPI", "LLMs", "Prompt Engineering"],
+      "metrics": [
+        {
+          "value": "Hands-off",
+          "label": "Assessment content no longer written by hand"
+        }
+      ],
+      "tech": [
+        "Python",
+        "FastAPI",
+        "LLMs",
+        "Prompt Engineering"
+      ],
       "links": []
     },
     {
@@ -83,7 +178,13 @@
       "problem": "Résumés arrive as PDFs in a hundred different layouts, and recruiters were reading every one of them by hand.",
       "approach": "spaCy and PDFMiner extract and classify fields from arbitrary PDF layouts, feeding an applicant pipeline with JWT-authenticated access and automated reminders.",
       "metrics": [],
-      "tech": ["Python", "spaCy", "PDFMiner", "Django REST Framework", "JWT Auth"],
+      "tech": [
+        "Python",
+        "spaCy",
+        "PDFMiner",
+        "Django REST Framework",
+        "JWT Auth"
+      ],
       "links": []
     }
   ]

@@ -8,9 +8,9 @@
   "timezone": "WAT (UTC+1)",
   "email": "ebukaemmanuel71@gmail.com",
   "phone": "+234 8129341700",
-  "avatar": "https://media.licdn.com/dms/image/v2/D4E03AQHMtCy44kZG5A/profile-displayphoto-scale_400_400/B4EaCcz3rzH4Ag-/0/1789337239705?e=1791417600&v=beta&t=Brm3TLVWHubbEmVbH6BSxSo8Iy-slzmYI-J06lTVrMQ",
+  "avatar": "https://res.cloudinary.com/deioo5lrm/image/upload/v1789683905/Z_1_1_z2vssh.jpg",
   "resumeUrl": "/resume.pdf",
-  "siteUrl": "https://yourname.dev",
+  "siteUrl": "https://eemmanuel.vercel.app",
   "availability": {
     "open": true,
     "label": "Open to senior roles",
